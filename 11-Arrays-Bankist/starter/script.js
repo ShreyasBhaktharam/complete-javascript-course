@@ -68,19 +68,25 @@ const inputClosePin = document.querySelector('.form__input--pin');
 /////////////////////////////////////////////////
 // LECTURES
 
-const currencies = new Map([
-    ['USD', 'United States dollar'],
-    ['EUR', 'Euro'],
-    ['GBP', 'Pound sterling'],
-]);
+
 
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 /////////////////////////////////////////////////
 
 //SPLICE 
+//Slices the array but changes the original array unlike the slice method
+// let arr = ['a', 'b', 'c', 'd', 'e'];
 
-let arr = ['a', 'b', 'c', 'd', 'e'];
+// console.log(arr.splice(2));
+// console.log(arr);
 
-console.log(arr.splice(2));
-console.log(arr);
+const currencies = new Map([
+    ['USD', 'United States dollar'],
+    ['EUR', 'Euro'],
+    ['GBP', 'Pound sterling'],
+]);
+
+currencies.forEach(function(value, key, map) {
+    console.log(`${key}: ${value}`);
+});
